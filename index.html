@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Faye</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="navbar-link" id="navMenu">
+          <a class="nav-link" href="#profile" id="profilelink">Profile</a>
+          <a class="nav-link" href="#skills" id="skillslink">Skills</a>
+          <a class="nav-link" href="#work" id="worklink">Work</a>
+          <a class="nav-link" href="#projects" id="projectslink">Projects</a>
+          <a class="nav-link" href="#contact" id="contactlink">Contact</a>
+        </div>
+      </nav>
+      <script>
+        function toggleMenu() {
+          const navMenu = document.getElementById("navMenu");
+          navMenu.classList.toggle("active");
+        }
+      </script>
+</header>
+
+<!-- Hero content -->
+<div class="slides" id="profile">
+    <!-- profile picture -->
+    <div class="img"> 
+        <img src="static/profile.JPG" alt="profile picture" id="profile-picture">
+    </div>
+    <!-- short profile blurb -->
+    <div class="text-center" id="profile-text">
+        <h2>Hi, I'm Faye. </h2>
+        <p>
+        An aspiring techie with big dreams to break into the industry -
+        fueled by a love for data analytics and a quiet passion for software development.</p>
+        <p>I'm here for the journey, the growth, and the occasional bug-induced existential crisis.
+        </p>
+    </div>
+</div>
+<div class="slides" id="skills">
+    <div class="skills-text">
+        <p>Web Development Technologies and Programming Languages </p>
+    </div>
+    <div class ="skills-container" id="skills-icons">
+        <img src ="static/python.png" alt ="python icon">
+        <img src ="static/flask.png" alt ="flask">
+        <img src ="static/sql.png" alt="sql">
+        <img src ="static/html.png" alt = "html">
+        <img src ="static/css.png" alt ="css">
+        <img src ="static/java.png" alt ="java">
+    </div>
+</div>
+<!-- Content --><!-- Work   -->
+<div class="slides" id="work">
+    <div class="work-container" id="work-content">
+        <h3>2024 - 2021</h3>
+        <h5>Quality Assurance Officer</h5>
+        <p><i>DHL Supply Chain Ltd</i></p>
+        <div class ="worklist">
+            <ul>
+                <li>Nationwide distribution of COVID-19 and other vaccines</li>
+                <li>Governing quality processes through audits and QMS investigation</li>
+                <li>Cold chain logistics experience, specialising in healthcare products</li>
+                <li>Certified internal auditor</p>
+            </ul>
+        </div>
+    </div>
+    <div class="work-container" id="work-content">
+        <h3>2021 - 2019</h3>
+        <h5>Supervisor - Chemistry</h5>
+        <p><i>Synlait Milk Ltd</i></p>
+        <div class ="worklist">
+            <ul>
+                <li>Manage stakeholder relationship</li>
+                <li>Achieve laboratory KPI</li>
+                <li>GMP/GLP governance with ISO 17025 standards</li>
+                <li>Document control and creation</li>
+                <li>Staff management</li>
+            </ul>
+        </div>
+    </div>
+    <div class="work-container" id="work-content">
+        <h3>2019 - 2016</h3>
+        <h5>Chemistry Analyst</h5>
+        <p><i>Synlait Milk Ltd</i></p>
+        <div class ="worklist">
+            <ul>
+                <li>Method validation and data analysis</li>
+                <li>Accredited subject matter expert</li>
+                <li>Knowledge on HPLC testing and maintenance</li>
+                <li>Certified WorkSafe Handler (class 6.1A, 6.1B) </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="slides" id="projects">
+    <div class="project-con">
+        <p>Coming soon!</p>
+    </div>
+    <!-- <div class="project-con">
+        <p>coming soon!</p>
+    </div>
+    <div class="project-con">
+        <p>coming soon!</p>
+    </div> -->
+</div>
+
+<div class="slides" id="contact">
+   <div class="connect-text">
+    <p>Let's connect! </p>
+   </div>
+   <div class="icons">
+        <div class="mail">
+                <a href="mailto:shufen.goh@gmail.com">
+                <img src="static/mail.png" alt="mail icon" width="1rem" height="1rem" class="icon-img">
+                </a>
+        </div>
+        <div class="linkedn">
+                <a href="http://www.linkedin.com/in/shu-fen-faye-goh-a4b053145" target="_blank">
+                <img src="static/linkedn.png" alt="linkedn icon" width="1rem" height="1rem" class="icon-img">
+                </a>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer">
+    <p class="footer-note" style="margin-top: 1rem;">© 2025 Created through chaos by Faye Goh</p>
+</footer>
+
+</body>
+</html>
+
