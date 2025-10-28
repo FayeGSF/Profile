@@ -4,135 +4,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, I'm Faye</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-    <nav class="navbar">
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <div class="navbar-link" id="navMenu">
-          <a class="nav-link" href="#profile" id="profilelink">Profile</a>
-          <a class="nav-link" href="#skills" id="skillslink">Skills</a>
-          <a class="nav-link" href="#work" id="worklink">Work</a>
-          <a class="nav-link" href="#projects" id="projectslink">Projects</a>
-          <a class="nav-link" href="#contact" id="contactlink">Contact</a>
-        </div>
-      </nav>
-      <script>
-        function toggleMenu() {
-          const navMenu = document.getElementById("navMenu");
-          navMenu.classList.toggle("active");
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-cream': '#fefee3',
+                        'custom-blue': '#9da8bb',
+                        'custom-gray': '#bcbdc1',
+                        'custom-dark': '#37374d',
+                        'custom-brown': '#615e5b'
+                    },
+                    fontFamily: {
+                        'mono': ['monospace']
+                    }
+                }
+            }
         }
-      </script>
+    </script>
+</head>
+<body class="m-0 p-0 w-full min-h-screen font-mono scroll-smooth">
+<!-- Header -->
+<header class="w-full p-4 flex justify-center items-center bg-custom-cream sticky top-0 z-50">
+    <nav class="flex justify-center items-center flex-wrap w-full mt-2">
+        <!-- Hamburger menu (hidden by default) -->
+        <div class="hidden text-xl cursor-pointer md:hidden" onclick="toggleMenu()">☰</div>
+        
+        <!-- Navigation links -->
+        <div class="text-lg font-bold flex justify-center items-center gap-12 md:flex md:gap-12" id="navMenu">
+            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#profile">Profile</a>
+            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#skills">Skills</a>
+            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#work">Work</a>
+            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#projects">Projects</a>
+            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#contact">Contact</a>
+        </div>
+    </nav>
 </header>
 
-<!-- Hero content -->
-<div class="slides" id="profile">
-    <!-- profile picture -->
-    <div class="img"> 
-        <img src="static/profile.JPG" alt="profile picture" id="profile-picture">
+<!-- Profile Section -->
+<div class="flex justify-center items-center w-full h-screen bg-custom-blue flex-wrap gap-40 p-5" id="profile">
+    <!-- Profile picture -->
+    <div class="flex justify-center overflow-hidden w-72 h-72 md:w-80 md:h-80 lg:w-72 lg:h-72"> 
+        <img src="static/profile.JPG" alt="profile picture" class="rounded-[20%] object-cover border-[0.3em] border-solid border-custom-cream w-full h-full">
     </div>
-    <!-- short profile blurb -->
-    <div class="text-center" id="profile-text">
-        <h2>Hi, I'm Faye. </h2>
-        <p>
-        An aspiring techie with big dreams to break into the industry -
-        fueled by a love for data analytics and a quiet passion for software development.</p>
-        <p>I'm here for the journey, the growth, and the occasional bug-induced existential crisis.
+    
+    <!-- Profile text -->
+    <div class="text-center max-w-2xl w-full break-words whitespace-normal p-2.5">
+        <h2 class="text-2xl font-bold mb-12 text-lg md:text-xl lg:text-2xl">Hi, I'm Faye.</h2>
+        <p class="text-lg mb-12 text-sm md:text-base lg:text-lg">
+            An aspiring techie with big dreams to break into the industry -
+            fueled by a love for web development and a quiet passion for data and testing.
+        </p>
+        <p class="text-lg text-sm md:text-base lg:text-lg">
+            I'm here for the journey, the growth, and the occasional bug-induced existential crisis.
         </p>
     </div>
 </div>
-<div class="slides" id="skills">
-    <div class="skills-text">
-        <p>Web Development Technologies and Programming Languages </p>
+
+<!-- Skills Section -->
+<div class="flex flex-col justify-center items-center bg-custom-cream gap-12 p-8 min-h-screen" id="skills">
+    <div class="flex justify-center items-center text-lg font-bold text-center p-4 w-full max-w-full break-words leading-tight">
+        <p>Web Development Technologies and Programming Languages</p>
     </div>
-    <div class ="skills-container" id="skills-icons">
-        <img src ="static/python.png" alt ="python icon">
-        <img src ="static/flask.png" alt ="flask">
-        <img src ="static/sql.png" alt="sql">
-        <img src ="static/html.png" alt = "html">
-        <img src ="static/css.png" alt ="css">
-        <img src ="static/java.png" alt ="java">
+    
+    <div class="flex justify-evenly items-center gap-20 overflow-hidden flex-wrap justify-center gap-6 md:gap-12 lg:gap-20">
+        <img src="static/python.png" alt="python icon" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
+        <img src="static/flask.png" alt="flask" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
+        <img src="static/sql.png" alt="sql" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
+        <img src="static/html.png" alt="html" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
+        <img src="static/css.png" alt="css" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
+        <img src="static/js.png" alt="javascript" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
+        <img src="static/react.svg" alt="react" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
     </div>
-</div>
-<!-- Content --><!-- Work   -->
-<div class="slides" id="work">
-    <div class="work-container" id="work-content">
-        <h3>2024 - 2021</h3>
-        <h5>Quality Assurance Officer</h5>
-        <p><i>DHL Supply Chain Ltd</i></p>
-        <div class ="worklist">
-            <ul>
-                <li>Nationwide distribution of COVID-19 and other vaccines</li>
-                <li>Governing quality processes through audits and QMS investigation</li>
-                <li>Cold chain logistics experience, specialising in healthcare products</li>
-                <li>Certified internal auditor</p>
-            </ul>
-        </div>
-    </div>
-    <div class="work-container" id="work-content">
-        <h3>2021 - 2019</h3>
-        <h5>Supervisor - Chemistry</h5>
-        <p><i>Synlait Milk Ltd</i></p>
-        <div class ="worklist">
-            <ul>
-                <li>Manage stakeholder relationship</li>
-                <li>Achieve laboratory KPI</li>
-                <li>GMP/GLP governance with ISO 17025 standards</li>
-                <li>Document control and creation</li>
-                <li>Staff management</li>
-            </ul>
-        </div>
-    </div>
-    <div class="work-container" id="work-content">
-        <h3>2019 - 2016</h3>
-        <h5>Chemistry Analyst</h5>
-        <p><i>Synlait Milk Ltd</i></p>
-        <div class ="worklist">
-            <ul>
-                <li>Method validation and data analysis</li>
-                <li>Accredited subject matter expert</li>
-                <li>Knowledge on HPLC testing and maintenance</li>
-                <li>Certified WorkSafe Handler (class 6.1A, 6.1B) </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="slides" id="projects">
-    <div class="project-con">
-        <p>Coming soon!</p>
-    </div>
-    <!-- <div class="project-con">
-        <p>coming soon!</p>
-    </div>
-    <div class="project-con">
-        <p>coming soon!</p>
-    </div> -->
 </div>
 
-<div class="slides" id="contact">
-   <div class="connect-text">
-    <p>Let's connect! </p>
-   </div>
-   <div class="icons">
-        <div class="mail">
-                <a href="mailto:shufen.goh@gmail.com">
-                <img src="static/mail.png" alt="mail icon" width="1rem" height="1rem" class="icon-img">
-                </a>
+<!-- Work Section -->
+<div class="flex flex-col justify-around items-center bg-custom-gray w-full pt-14 pb-8" id="work">
+    <!-- Work Experience 1 -->
+    <div class="flex flex-col bg-transparent border-[0.3em] border-solid border-custom-cream rounded-lg text-center w-full max-w-3xl min-h-auto text-lg p-2 overflow-hidden break-words mb-4">
+        <h3 class="font-bold text-left text-xl m-0 pl-2 pt-2 pb-2">2024 - 2021</h3>
+        <h5 class="m-0 font-bold text-lg">Quality Assurance Officer</h5>
+        <p class="m-0 flex-1 justify-center text-base"><i>DHL Supply Chain Ltd</i></p>
+        <div class="flex">
+            <ul class="text-left list-disc list-inside pl-4 m-0">
+                <li class="mb-2 text-base">Nationwide distribution of COVID-19 and other vaccines</li>
+                <li class="mb-2 text-base">Governing quality processes through audits and QMS investigation</li>
+                <li class="mb-2 text-base">Cold chain logistics experience, specialising in healthcare products</li>
+                <li class="mb-2 text-base">Certified internal auditor</li>
+            </ul>
         </div>
-        <div class="linkedn">
-                <a href="http://www.linkedin.com/in/shu-fen-faye-goh-a4b053145" target="_blank">
-                <img src="static/linkedn.png" alt="linkedn icon" width="1rem" height="1rem" class="icon-img">
-                </a>
+    </div>
+    
+    <!-- Work Experience 2 -->
+    <div class="flex flex-col bg-transparent border-[0.3em] border-solid border-custom-cream rounded-lg text-center w-full max-w-3xl min-h-auto text-lg p-2 overflow-hidden break-words mb-4">
+        <h3 class="font-bold text-left text-xl m-0 pl-2 pt-2 pb-2">2021 - 2019</h3>
+        <h5 class="m-0 font-bold text-lg">Supervisor - Chemistry</h5>
+        <p class="m-0 flex-1 justify-center text-base"><i>Synlait Milk Ltd</i></p>
+        <div class="flex">
+            <ul class="text-left list-disc list-inside pl-4 m-0">
+                <li class="mb-2 text-base">Manage stakeholder relationship</li>
+                <li class="mb-2 text-base">Achieve laboratory KPI</li>
+                <li class="mb-2 text-base">GMP/GLP governance with ISO 17025 standards</li>
+                <li class="mb-2 text-base">Document control and creation</li>
+                <li class="mb-2 text-base">Staff management</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Work Experience 3 -->
+    <div class="flex flex-col bg-transparent border-[0.3em] border-solid border-custom-cream rounded-lg text-center w-full max-w-3xl min-h-auto text-lg p-2 overflow-hidden break-words mb-4">
+        <h3 class="font-bold text-left text-xl m-0 pl-2 pt-2 pb-2">2019 - 2016</h3>
+        <h5 class="m-0 font-bold text-lg">Chemistry Analyst</h5>
+        <p class="m-0 flex-1 justify-center text-base"><i>Synlait Milk Ltd</i></p>
+        <div class="flex">
+            <ul class="text-left list-disc list-inside pl-4 m-0">
+                <li class="mb-2 text-base">Method validation and data analysis</li>
+                <li class="mb-2 text-base">Accredited subject matter expert</li>
+                <li class="mb-2 text-base">Knowledge on HPLC testing and maintenance</li>
+                <li class="mb-2 text-base">Certified WorkSafe Handler (class 6.1A, 6.1B)</li>
+            </ul>
         </div>
     </div>
 </div>
 
+<!-- Projects Section -->
+<div class="bg-custom-dark flex justify-start items-center flex-nowrap h-screen gap-8 overflow-x-auto overflow-y-hidden p-8 scroll-smooth relative" id="projects">
+    <!-- First project with chevrons -->
+    <div class="flex items-center flex-shrink-0 w-full h-full gap-4">
+        <!-- Left chevron for previous project -->
+        <div class="flex justify-center items-center w-16 h-full cursor-pointer" onclick="goToPrevious()">
+            <div class="text-custom-cream text-5xl font-bold animate-pulse">‹</div>
+        </div>
+        <div class="flex flex-col justify-start pt-10 items-center bg-transparent border-[0.4375em] border-solid border-custom-cream rounded-lg  p-4 flex-1 h-full">
+            <div>
+                <img src="static/visionvault.png" alt="VisionVision" class="w-full h-auto max-w-[950px] max-h-[700px] pb-4">
+            </div>
+            <div>
+                <div>
+                    <p class="flex text-xl text-custom-cream">Finance tracker web application with what-if scenario simulation</p>
+                    <p class="mt-2 text-custom-cream"> A personal expense tracker web application providing goal setting and expense forecasting using scenario analysis.</p>
+                    <!-- <p class="text-custom-cream text-md font-semibold">Tech Stack:</p> -->
+                    <ul class="list-none text-left m-0 text-custom-cream  mt-8">
+                        <li class="font-bold">Tech Stack:</li>
+                        <li>Frontend: React, Tailwind CSS, Javascript</li>
+                        <li>Backend: Flask, Python</li>
+                        <li>Database: MySQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Chevron indicator for first project -->
+        <div class="flex justify-center items-center w-16 h-full cursor-pointer" onclick="goToNext()">
+            <div class="text-custom-cream text-5xl font-bold animate-pulse">›</div>
+        </div>
+    </div>
+    
+    <!-- Second project with chevrons -->
+    <div class="flex items-center flex-shrink-0 w-full h-full gap-4">
+        <!-- Left chevron for previous project -->
+        <div class="flex justify-center items-center w-16 h-full cursor-pointer" onclick="goToPrevious()">
+            <div class="text-custom-cream text-5xl font-bold animate-pulse">‹</div>
+        </div>
+        <div class="flex justify-center items-center bg-transparent border-[0.4375em] border-solid border-custom-cream rounded-lg text-center p-8 flex-1 h-full">
+            <p class="flex text-2xl text-custom-cream">Coming soon!</p>
+        </div>
+        <!-- Chevron indicator for second project -->
+        <div class="flex justify-center items-center w-16 h-full cursor-pointer" onclick="goToNext()">
+            <div class="text-custom-cream text-5xl font-bold animate-pulse">›</div>
+        </div>
+    </div>
+    
+    <!-- Third project with chevrons -->
+    <div class="flex items-center flex-shrink-0 w-full h-full gap-4">
+        <!-- Left chevron for previous project -->
+        <div class="flex justify-center items-center w-16 h-full cursor-pointer" onclick="goToPrevious()">
+            <div class="text-custom-cream text-5xl font-bold animate-pulse">‹</div>
+        </div>
+        <div class="flex justify-center items-center bg-transparent border-[0.4375em] border-solid border-custom-cream rounded-lg text-center p-8 flex-1 h-full">
+            <p class="flex text-2xl text-custom-cream">Coming soon!</p>
+        </div>
+        <!-- Right chevron for next project (loops to first) -->
+        <div class="flex justify-center items-center w-16 h-full cursor-pointer" onclick="goToNext()">
+            <div class="text-custom-cream text-5xl font-bold animate-pulse">›</div>
+        </div>
+    </div>
 </div>
-<footer class="footer">
-    <p class="footer-note" style="margin-top: 1rem;">© 2025 Created through chaos by Faye Goh</p>
+
+<!-- Contact Section -->
+<div class="bg-custom-blue flex justify-center flex-col h-screen" id="contact">
+    <div class="text-5xl font-bold text-center md:text-4xl lg:text-5xl">
+        <p>Let's connect!</p>
+    </div>
+    
+    <div class="flex flex-row justify-center items-center gap-16">
+        <div>
+            <a href="mailto:shufen.goh@gmail.com">
+                <img src="static/mail.png" alt="mail icon" class="w-20 h-20 transition-transform duration-200 ease-in-out hover:scale-110">
+            </a>
+        </div>
+        <div>
+            <a href="http://www.linkedin.com/in/shu-fen-faye-goh-a4b053145" target="_blank">
+                <img src="static/linkedn.png" alt="linkedn icon" class="w-20 h-20 transition-transform duration-200 ease-in-out hover:scale-110">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="w-full flex justify-center bg-custom-cream p-4 text-lg font-bold">
+    <p class="mt-4">© 2025 Created through chaos by Faye Goh</p>
 </footer>
+
+<script>
+    function toggleMenu() {
+        const navMenu = document.getElementById("navMenu");
+        navMenu.classList.toggle("hidden");
+        navMenu.classList.toggle("flex");
+        navMenu.classList.toggle("flex-col");
+        navMenu.classList.toggle("gap-4");
+        navMenu.classList.toggle("bg-custom-cream");
+        navMenu.classList.toggle("absolute");
+        navMenu.classList.toggle("top-14");
+        navMenu.classList.toggle("p-4");
+        navMenu.classList.toggle("rounded-lg");
+        navMenu.classList.toggle("z-50");
+        navMenu.classList.toggle("text-lg");
+        navMenu.classList.toggle("ml-auto");
+        navMenu.classList.toggle("mr-auto");
+    }
+
+    // Project navigation functionality
+    let currentProject = 0;
+    const totalProjects = 3; // You have 3 project sections
+
+    function goToNext() {
+        currentProject = (currentProject + 1) % totalProjects; // Loop back to 0 when reaching the end
+        const container = document.getElementById('projects');
+        container.scrollTo({
+            left: currentProject * container.clientWidth,
+            behavior: 'smooth'
+        });
+    }
+
+    function goToPrevious() {
+        currentProject = (currentProject - 1 + totalProjects) % totalProjects; // Loop to last project when going back from first
+        const container = document.getElementById('projects');
+        container.scrollTo({
+            left: currentProject * container.clientWidth,
+            behavior: 'smooth'
+        });
+    }
+
+</script>
 
 </body>
 </html>
-
