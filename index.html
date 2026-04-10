@@ -26,24 +26,24 @@
 </head>
 <body class="m-0 p-0 w-full min-h-screen font-mono scroll-smooth">
 <!-- Header -->
-<header class="w-full p-4 flex justify-center items-center bg-custom-cream sticky top-0 z-50">
+<header class="w-full p-4 flex justify-center items-center bg-custom-brown sticky top-0 z-50">
     <nav class="flex justify-center items-center flex-wrap w-full mt-2">
         <!-- Hamburger menu (hidden by default) -->
         <div class="hidden text-xl cursor-pointer md:hidden" onclick="toggleMenu()">☰</div>
         
         <!-- Navigation links -->
         <div class="text-lg font-bold flex justify-center items-center gap-12 md:flex md:gap-12" id="navMenu">
-            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#profile">Profile</a>
-            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#skills">Skills</a>
-            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#work">Work</a>
-            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#projects">Projects</a>
-            <a class="no-underline text-custom-brown hover:text-custom-dark transition-colors" href="#contact">Contact</a>
+            <a class="no-underline text-custom-cream  hover:text-custom-cream transition-colors" href="#profile">Profile</a>
+            <a class="no-underline text-custom-cream  hover:text-custom-cream transition-colors" href="#skills">Skills</a>
+            <a class="no-underline text-custom-cream  hover:text-custom-cream transition-colors" href="#work">Work</a>
+            <a class="no-underline text-custom-cream  hover:text-custom-cream transition-colors" href="#projects">Projects</a>
+            <a class="no-underline text-custom-cream  hover:text-custom-cream transition-colors" href="#contact">Contact</a>
         </div>
     </nav>
 </header>
 
 <!-- Profile Section -->
-<div class="flex justify-center items-center w-full h-screen bg-custom-blue flex-wrap gap-40 p-5" id="profile">
+<div class="flex justify-center items-center w-full h-screen bg-custom-blue flex-wrap gap-30 p-5" id="profile">
     <!-- Profile picture -->
     <div class="flex justify-center overflow-hidden w-72 h-72 md:w-80 md:h-80 lg:w-72 lg:h-72"> 
         <img src="static/profile.JPG" alt="profile picture" class="rounded-[20%] object-cover border-[0.3em] border-solid border-custom-cream w-full h-full">
@@ -54,11 +54,18 @@
         <h2 class="text-2xl font-bold mb-12 text-lg md:text-xl lg:text-2xl">Hi, I'm Faye.</h2>
         <p class="text-lg mb-12 text-sm md:text-base lg:text-lg">
             An aspiring techie with big dreams to break into the industry -
-            fueled by a love for web development and a quiet passion for data and testing.
+            fueled by a love for web development and a quiet passion for data, application support and testing.
         </p>
+        <div>
         <p class="text-lg text-sm md:text-base lg:text-lg">
             I'm here for the journey, the growth, and the occasional bug-induced existential crisis.
+            <p class="font-style: italic text-sm text-sm md:text-base lg:text-md mt-2">Fuelled by copious amounts of coffee. </p>
+            <a href="static/shu_fen_goh_resume_v3_2026.pdf" target="_blank">
+                <img src ="static/resume.svg" alt="resume icon" class="mx-auto mt-6 w-20 h-20 transition-transform duration-200 ease-in-out hover:scale-110">
+                <span class="mt-2 text-sm md:text-base group-hover:underline"> Download my resume</span>
+            </a>
         </p>
+       </div>
     </div>
 </div>
 
@@ -67,15 +74,19 @@
     <div class="flex justify-center items-center text-lg font-bold text-center p-4 w-full max-w-full break-words leading-tight">
         <p>Web Development Technologies and Programming Languages</p>
     </div>
-    
-    <div class="flex justify-evenly items-center gap-20 overflow-hidden flex-wrap justify-center gap-6 md:gap-12 lg:gap-20">
-        <img src="static/python.png" alt="python icon" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
-        <img src="static/flask.png" alt="flask" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
-        <img src="static/sql.png" alt="sql" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
-        <img src="static/html.png" alt="html" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
-        <img src="static/css.png" alt="css" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
-        <img src="static/js.png" alt="javascript" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
-        <img src="static/react.svg" alt="react" class="w-12 h-12 object-contain md:w-14 md:h-14 lg:w-12 lg:h-12">
+    <div class="flex justify-center gap-6 md:gap-12 lg:gap-20">
+        <img src="static/python.png" class="w-12 h-12">
+        <img src="static/flask.png" class="w-16 h-12">
+        <img src="static/sql.png" class="w-12 h-12">
+        <img src="static/html.png" class="w-12 h-12">
+        <img src="static/css.png" class="w-12 h-12">
+        <img src="static/js.png" class="w-12 h-12">
+        <img src="static/react.svg" class="w-12 h-12">
+    </div>
+
+    <div class="flex justify-center items-center gap-6 mt-6">
+        <img src="static/office.png" class="w-24 h-24 object-contain">
+        <img src="static/pbi.png" class=" w-24 h-24 object-contain">
     </div>
 </div>
 
@@ -138,7 +149,9 @@
         </div>
         <div class="flex flex-col justify-start pt-10 items-center bg-transparent border-[0.4375em] border-solid border-custom-cream rounded-lg  p-4 flex-1 h-full">
             <div>
-                <img src="static/visionvault.png" alt="VisionVision" class="w-full h-auto max-w-[950px] max-h-[700px] pb-4">
+                <a href ="https://fayegoh1162340.pythonanywhere.com/" target="_blank">
+                <img src="static/visionvault.png" alt="VisionVision" class="w-full h-auto max-w-[750px] max-h-[500px] pb-4">
+            </a>
             </div>
             <div>
                 <div>
@@ -151,6 +164,14 @@
                         <li>Backend: Flask, Python</li>
                         <li>Database: MySQL</li>
                     </ul>
+                    <!-- added PA link  -->
+                    <div class="text-custom-cream mt-2"> 
+                    <u><i>
+                        <a href ="https://fayegoh1162340.pythonanywhere.com/" target="_blank" class="font-semibold bold-hover">Link Here</a>
+                    </u></i>
+                    <p class="text-xs font-style: italic">Username: User01  Password: Password123!</p>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,21 +214,22 @@
 
 <!-- Contact Section -->
 <div class="bg-custom-blue flex justify-center flex-col h-screen" id="contact">
-    <div class="text-5xl font-bold text-center md:text-4xl lg:text-5xl">
+    <div class="text-4xl font-bold text-center md:text-3xl lg:text-4xl p-4">
         <p>Let's connect!</p>
     </div>
     
     <div class="flex flex-row justify-center items-center gap-16">
         <div>
             <a href="mailto:shufen.goh@gmail.com">
-                <img src="static/mail.png" alt="mail icon" class="w-20 h-20 transition-transform duration-200 ease-in-out hover:scale-110">
+                <img src="static/mail.png" alt="mail icon" class="w-14 h-14 transition-transform duration-200 ease-in-out hover:scale-110">
             </a>
         </div>
         <div>
             <a href="http://www.linkedin.com/in/shu-fen-faye-goh-a4b053145" target="_blank">
-                <img src="static/linkedn.png" alt="linkedn icon" class="w-20 h-20 transition-transform duration-200 ease-in-out hover:scale-110">
+                <img src="static/linkedn.png" alt="linkedn icon" class="w-14 h-14 transition-transform duration-200 ease-in-out hover:scale-110">
             </a>
         </div>
+        
     </div>
 </div>
 
